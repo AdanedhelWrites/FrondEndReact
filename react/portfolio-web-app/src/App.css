@@ -44,6 +44,7 @@ main {
   border: 1px solid red;
   flex-grow: 1;
   flex-basis: 0;
+  overflow: scroll;
 }
 main > header {
   border: 1px solid #ccc;

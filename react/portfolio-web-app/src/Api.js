@@ -42,8 +42,21 @@ export function deleteWork(id) {
     }).then((data) => { return data }).catch((err) => { err.message })
 }
 
-export function updateWork(id) {
+export function updateWork(work) {
+    const options = {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(work)
+    }
+    console.log(work);
+    return fetch(`${BASE_URL}/works/update`, options).then((response) => {
+        console.log(response);
+        if (!response.ok) {
+            throw new Error("Unvalid Parameter")
+        }
 
+        return true;
+    }).catch((err) => { err.message })
 }
 
 export function addWork(work) {
@@ -63,6 +76,4 @@ export function addWork(work) {
         return data
     })
         .catch((err) => { err.message })
-
-
 }
