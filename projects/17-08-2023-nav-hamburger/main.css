@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    border: 2px solid gray!important;
+}
+
+#root header{
+    min-height: 100px;
+}
+
+main{
+    min-height: calc(100vh - 200px);
+}
+
+#root footer{
+    min-height: 100px;
+}
+
+/* Component nav hamburger */
+.nav-hamburger{
+    border-color: red!important;
+    background-color: pink;   
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.nav-hamburger button{
+    width: 40px;
+    height: 40px;
+}
+.nav-hamburger button span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    margin: 2px;
+}
+.nav-hamburger.expanded button span:nth-child(2){
+    display: none;
+}
+
+.nav-hamburger.expanded button span:nth-child(1){
+    transform:rotate(45deg) translateX(0px) translateY(2.5px);
+}
+.nav-hamburger.expanded button span:nth-child(3){
+    transform:rotate(-45deg) translateY(-3.5px);
+}
+
+.nav-hamburger ul{
+    display: none;
+}
+
+.nav-hamburger.expanded ul{
+    display: block;
+}

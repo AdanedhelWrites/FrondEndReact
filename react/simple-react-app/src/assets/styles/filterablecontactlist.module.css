@@ -1,0 +1,21 @@
+.tbl {
+  border: 1px solid lightgray;
+  width: 100%;
+}
+
+.tbl tr {
+  border: 1px solid lightgray;
+}
+.tbl td,
+.tbl th {
+  padding: 8px;
+}
+
+.tbl th {
+  background-color: antiquewhite;
+}
+
+.tbl thead tr th {
+  background-color: #333;
+  color: white;
+}

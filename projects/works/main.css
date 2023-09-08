@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  border: 2px solid black;
+}
+
+#root > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  border: 2px solid green;
+  padding: 20px 25px;
+}
+
+#root > main > ul > li:nth-child(even) {
+  background-color: hsl(73, 48%, 85%);
+}
+
+#root > main > ul > li:nth-child(odd) {
+  background-color: hsl(203, 48%, 85%);
+}
+
+#root > footer {
+  border: 2px solid red;
+  height: 25vh;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: limegreen;
+}
+
+h2 {
+  font: 24px;
+  font-weight: bold;
+  color: green;
+}
+
+main > .contents > li {
+  padding: 30px;
+}
+
+main > .contents > li > * {
+  margin-bottom: 20px;
+}
+
+li > button {
+  width: 80px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: gray;
+}
+
+li > button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 400ms, background-color 400ms, box-shadow 400ms;
+  box-shadow: 0 10px 29px blue;
+  background-color: hsla(0, 0%, 66%, 0.164);
+}
+
+/* forms */
+#frm-add-work {
+  display: none;
+}
+
+#frm-add-work.show {
+  display: flex;
+}
+form {
+  border: 3px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  background-color: aqua;
+  padding: 16px;
+}
+input[type="text"] {
+  padding: 8px;
+  width: 300px;
+}
+
+/* buttons */
+
+button.type-1 {
+  width: 200px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+}

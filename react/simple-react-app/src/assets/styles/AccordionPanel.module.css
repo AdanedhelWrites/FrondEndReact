@@ -1,0 +1,7 @@
+.Accordion {
+  border: 1px solid black;
+}
+
+.Accordion li {
+  border: 1px dotted pink;
+}

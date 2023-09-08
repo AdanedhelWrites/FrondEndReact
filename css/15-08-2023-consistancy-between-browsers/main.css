@@ -1,0 +1,12 @@
+#root{
+    border: 4px solid red
+}
+#root > header{
+    border: 1px solid black
+}
+main{
+    border: 1px solid black
+}
+#root > footer{
+    border: 1px solid black
+}

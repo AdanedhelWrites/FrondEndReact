@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  border: 2px solid gray !important;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 32px;
+}
+.limited-width {
+  max-width: 1000px;
+  border-color: blue !important;
+  margin: 0 auto;
+}
+main section {
+  background-color: hsl(200, 50, 50);
+  min-height: 200px;
+  padding: 48px;
+}
+.limited-width {
+  max-width: 1000px;
+  border-color: aqua !important;
+  margin: auto;
+}
+
+#root header {
+  background-color: pink;
+  padding: 8px;
+}
+main > section figure {
+  border: 4px solid red !important;
+  position: relative;
+}
+main section figure figcaption {
+  position: absolute;
+  bottom: 24px;
+  background-color: rgba(rgba(9, 76, 97, 0.76), green, blue, alpha);
+  color: white;
+  right: 24px;
+  padding: 8px;
+}
+main > section figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+main section li {
+  margin-bottom: 24px;
+}
+#root footer {
+  background-color: black;
+  color: white;
+  padding: 112px;
+}
+#root footer section {
+  padding: 48px;
+}
+.nav-hamburger {
+  border-color: red !important;
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.nav-hamburger button {
+  width: 40px;
+  height: 40px;
+}
+.nav-hamburger button span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  margin: 2px;
+}
+.nav-hamburger.expanded button span:nth-child(2) {
+  display: none;
+}
+
+.nav-hamburger.expanded button span:nth-child(1) {
+  transform: rotate(45deg) translateX(0px) translateY(2.5px);
+}
+.nav-hamburger.expanded button span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-3.5px);
+}
+
+.nav-hamburger ul {
+  display: none;
+}
+
+.nav-hamburger.expanded ul {
+  display: block;
+}
+
+@media screen and (min-width: 1000px) {
+  main section ul {
+    display: flex;
+    gap: 24px;
+  }
+  main section ul li {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  #root > footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #root > footer section {
+    flex-basis: 50%;
+  }
+  .nav-hamburger button {
+    display: none;
+  }
+
+  .nav-hamburger > ul {
+    display: flex !important;
+  }
+
+  .nav-hamburger {
+    position: static;
+  }
+  #root > header .limited-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #root > footer section {
+    flex-basis: 25%;
+  }
+}

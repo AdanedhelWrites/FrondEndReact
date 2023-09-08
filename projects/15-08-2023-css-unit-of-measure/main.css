@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;    
+}
+body{
+    margin: 48px;
+}
+h1{
+    font-size: 48px;
+}
+h3{
+    font-size: 22px;
+}
+
+.box1{
+    border: 5px yellow solid;
+    width: 100px;
+    height: 100px;   
+    margin-left: 50px;
+    margin-bottom: 50px; 
+    margin-top: 5px;
+}
+
+.box2{
+    border: 5px green solid;
+    width: 50%;
+    height: 100px;  
+    margin-left: 3%;
+    margin-bottom: 5%;
+    margin-top: 5px;
+}
+
+.buyuk-div{
+    border: 5px pink solid;
+}
+.box3{
+    border: 5px wheat solid;
+    width: 45vw;
+    margin-left: 50px;
+    margin-bottom: 50px; 
+    margin-top: 5px;
+}
+.box4{
+    border: 5px purple solid;
+    height: 30vh;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px; 
+    margin-top: 5px;
+}
+footer nav{
+    margin-left: 75px;
+}
+strong{
+    font-size: larger;
+}
+

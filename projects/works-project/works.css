@@ -1,0 +1,37 @@
+#root header nav {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 5px;
+}
+#root header nav div {
+  justify-content: center;
+  align-items: center;
+}
+#root header nav div svg {
+  width: 100%;
+  height: 100px;
+}
+main div {
+  border: 1px solid pink;
+  width: 100%;
+  height: 800px;
+  margin-bottom: 5px;
+}
+
+#root footer {
+  width: 100%;
+  height: 100px;
+}
+#job-list {
+  list-style: none;
+  position: relative;
+  display: inline;
+}
+#root footer {
+  justify-content: center;
+  align-items: center;
+}
+#root footer svg {
+  width: 100%;
+  height: 100px;
+}

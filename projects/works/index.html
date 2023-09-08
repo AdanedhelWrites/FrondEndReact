@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works Page</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="index.js" defer></script>
+
+</head>
+
+<body>
+    <div id="root">
+        <header>
+            <div class="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <div>
+                <p>WORKS</p>
+            </div>
+        </header>
+
+        <main>
+            <header>
+                <button type="button" class="type-1">Ekle</button>
+                <form action="works.php" method="get" id="frm-add-work" class="show">
+
+                    <input type="text" name="work-title" placeholder="Work title" />
+                    <input type="text" name="work-description" placeholder="Work description" />
+                    <button type="submit">Kaydet</button>
+                </form>
+            </header>
+
+            <ul class="contents">
+
+            </ul>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

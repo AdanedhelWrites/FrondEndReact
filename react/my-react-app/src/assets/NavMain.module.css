@@ -1,0 +1,21 @@
+.NavMain {
+  margin-top: 16px;
+}
+
+.NavMain ul {
+  display: flex;
+  gap: 8px;
+}
+
+.NavMain a {
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.NavMain a:hover {
+  background-color: black;
+  color: white;
+}

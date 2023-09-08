@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+a{
+    border: 1px solid white;
+    text-decoration: none;
+    display: inline;
+
+    width: 100px;
+    height: 100px;
+}
+div{
+    border: 1px solid blue;
+    display: block;
+    
+     width: 300px;
+     height: 200px;
+     margin: 0 auto;
+}
+input[type="text"] {
+    width: 200px;
+    padding: 8px;
+}
+img{    
+    width: 200px;
+    height: 50px;
+}
+
+em{
+    border: 1px solid blue;
+    width: 100px;
+    display: inline;
+}
+blockquote{
+    border: 1px solid white;    
+    display: block;
+}
+figure{
+    border: 1px solid white;
+}

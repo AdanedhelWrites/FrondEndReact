@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 32px;
+}
+
+:root {
+  --primary-color: aqua;
+  --secondary-color: orangered;
+}
+
+#root header {
+  background-color: var(--primary-color);
+  min-height: 40px;
+  padding: 24px;
+}
+
+main {
+  min-height: 600px;
+  padding: 24px;
+}
+
+#root footer {
+  background-color: var(--primary-color);
+  min-height: 50px;
+}
+
+form {
+  min-width: 400px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid gray;
+  padding: 24px;
+}
+#msg-to-user {
+  padding: 24px;
+  background-color: pink;
+  border-radius: 8px;
+}
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+}
+
+form button {
+  height: 40px;
+  background-color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+form label {
+  color: gray;
+  font-style: italic;
+}

@@ -1,0 +1,38 @@
+/* çerçeve çizgisi 10px
+t,r,b,l(saat yöni) siyah
+200px 200px */
+*{
+    box-sizing: border-box;
+}
+.box{
+    border: 10px black solid;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;    
+}
+.regular-wrapper{
+    border: 5px red solid;    
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.box1{
+    background-color: green;
+    border: 10px black solid;
+    width: 200px;
+    height: 200px;
+    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
+    padding: 10px;
+    pad: 10px 20px 30px;
+}
+.box1 p{
+    color: pink;
+}
+li{
+    padding-bottom: 4px
+}

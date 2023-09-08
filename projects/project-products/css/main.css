@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+:root {
+  --primary-color: aqua;
+  --secondary-color: orangered;
+}
+
+#root > header {
+  background-color: var(--primary-color);
+  min-height: 40px;
+  padding: 24px;
+}
+
+main {
+  min-height: calc(100vh - 140px);
+  padding: 24px;
+}
+
+#root footer {
+  background-color: var(--primary-color);
+  min-height: 50px;
+  padding: 24px;
+}
+#product-list {
+  display: flex;
+  gap: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#product-list .card {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.card {
+  border-radius: 8px;
+  padding: 8px;
+  -webkit-box-shadow: 10px -12px 3px -6px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px -12px 3px -6px rgba(0, 0, 0, 1);
+  box-shadow: 10px -12px 3px -6px rgba(0, 0, 0, 1);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card button {
+  opacity: 0.1;
+}
+.card:hover button {
+  opacity: 1;
+}
+
+#basket-container {
+  position: fixed;
+  width: 300px;
+  top: 0;
+  right: 0;
+  background-color: #222;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+#basket-container div {
+  background-color: #222;
+}
+
+#basket-container img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#basket-container > .content {
+  padding: 8px 24px;
+  height: 100px;
+  overflow-y: scroll;
+}

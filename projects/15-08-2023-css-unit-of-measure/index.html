@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Css Ölçü birimleri denemesi">
+    <title>CSS Unit of Measures</title>
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=IBM+Plex+Sans+Condensed:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1> <strong>Css</strong> Ölçü Birimleri</h1>
+        </header>
+        <hr>
+        <main>
+            <h3>PX Ölçü Birimi</h3>
+            <p>In CSS, px is a unit of length that is defined as one pixel. A pixel is the smallest addressable unit of
+                a
+                display
+                device. The number of pixels per inch (ppi) on a display device varies, so the actual size of a px unit
+                will
+                vary
+                depending on the device.
+                Pixels are the most common unit of length used in CSS, especially for specifying the size of elements on
+                screen. They
+                are also the only unit of length that is guaranteed to be rendered the same on all devices, regardless
+                of
+                the device's
+                ppi.
+                Here is an example of how to use the px unit in CSS to specify the width of an element:
+                <strong>width: 100px;</strong>
+                This code will set the width of the element to 100 pixels. On a display device with a ppi of 96, this
+                will
+                be equivalent
+                to 1 inch.
+                Pixels are a good choice for specifying the size of elements when you want to ensure that they are
+                rendered
+                consistently
+                on all devices. However, they can also be limiting, as they are not related to any physical unit of
+                measurement. If you
+                need to specify the size of an element in terms of a physical unit, such as centimeters or inches, you
+                should use a
+                different unit of length, such as em or rem.
+            </p>
+            <div class="buyuk-div">
+                <div class="box1">100px ~ 100px</div>
+            </div>
+
+            <h3>% Ölçü Birimi</h3>
+            <p>In CSS, % is a unit of percentage that is used to specify the size of an element relative to its parent
+                element. For
+                example, if you set the width of an element to 50%, it will be half the width of its parent element.
+                Percentages are a good choice for specifying the size of elements when you want them to be responsive
+                and
+                scale to
+                different screen sizes. For example, you could use percentages to set the width of a column on a web
+                page so
+                that it
+                always takes up half of the width of the page, regardless of the size of the screen.
+                Here is an example of how to use the % unit in CSS to specify the width of an element:
+                <strong>width: 50%;</strong>
+                This code will set the width of the element to 50% of the width of its parent element.
+                Percentages can also be used to specify the size of elements relative to the viewport, which is the
+                visible
+                area of the
+                browser window. For example, you could use percentages to set the height of a header so that it always
+                takes
+                up 20% of
+                the viewport height, regardless of the size of the browser window.
+            </p>
+            <div class="buyuk-div">
+                <div class="box2">50% ~ 100px</div>
+            </div>
+
+            <h3>Vw Ölçü Birimi</h3>
+            <p>vw birimi, yataydaki ekran boyutunun 100/1'ine denk gelen bir ölçü birimi.
+                <strong>width: 2vw;</strong>
+                Ekran çözünürlüğümüzün 1280x800 olduğunu düşünürsek;
+                2x1280/100 = 25,6px boyutunda katman elde ediyoruz.
+                <strong>div { width: 100vw; height: 100vw; } </strong>
+                Yine aynı ekranda 1280x1280px’lik kare bir boyut elde ediyoruz.
+            </p>
+            <div class="buyuk-div">
+                <div class="box3">50vw ~ 100px</div>
+            </div>
+
+            <h3>Vh Ölçü Birimi</h3>
+            <p>vh ise ekran yüksekliğinin 100/1'lik bir bölümüne denk geliyor.
+                <strong> max-height: 50vh</strong>
+                Bu örneğimiz ise katman boyutu maximum yarım ekran yüksekliğinde olacak.
+            </p>
+            <div class="buyuk-div">
+                <div class="box4">50vh ~ 100px</div>
+            </div>
+    </div>
+    </main>
+    <hr>
+    <footer>
+        <nav>JAVA9 Frontend</nav>
+    </footer>
+
+</body>
+
+</html>

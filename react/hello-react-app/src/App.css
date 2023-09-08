@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-clr: yellow;
+  --secondary-clr: #333;
+}
+
+a {
+  font-size: 40px;
+}
+#root > header {
+  padding: 24px;
+}
+main {
+  padding: 24px;
+}
+
+#root > footer {
+  padding: 24px;
+  background-color: var(--secondary-clr);
+  color: white;
+}
+.basic-header {
+  background-color: yellow;
+}
+
+.main-menu ul {
+  display: flex;
+}
+
+.main-menu a {
+  font-size: 16px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-menu a:hover {
+  background-color: black;
+  color: white;
+}

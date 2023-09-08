@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+section{
+    border: 2px solid red;
+    padding: 8px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+section .box{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255,255,0,0.5);
+    border: 1px solid black;
+}
+
+section .box:nth-of-type(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section .box:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+section .box:nth-of-type(3){
+    position: absolute;
+    bottom:0;
+    left: 0;
+}
+
+section .box:nth-of-type(4){
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+

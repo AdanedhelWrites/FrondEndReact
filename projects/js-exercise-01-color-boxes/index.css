@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 32px;
+}
+
+:root {
+  --primary-color: aqua;
+  --secondary-color: orangered;
+}
+
+#root header {
+  background-color: var(--primary-color);
+  min-height: 40px;
+  padding: 24px;
+}
+
+main {
+  min-height: 600px;
+  padding: 24px;
+}
+
+#root footer {
+  background-color: var(--primary-color);
+  min-height: 50px;
+}
+
+#stage .box {
+  border: 1px solid gray;
+  height: 100px;
+  flex-basis: 10%;
+}
+
+#stage {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,12 @@
+div{
+    border: 3px solid black;
+}
+header{
+    border: 1px solid red;
+}
+main{
+    border: 1px solid blue;
+}
+footer{
+    border: 1px solid green;
+}

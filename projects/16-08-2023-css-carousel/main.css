@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.carousel {
+  border: 2px solid red;
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+}
+
+.carousel .slider {
+  display: flex;
+  top: 0;
+  border: 2px solid blue;
+  display: flex;
+  width: 200%;
+  height: 100%;
+  margin-left: 00%;
+}
+
+.carousel .slider .content {
+  border: 2px green solid;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.carousel .slider .content img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.carousel nav {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.carousel nav button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+}
+
+.carousel nav button[aria-selected] {
+  background-color: black;
+}

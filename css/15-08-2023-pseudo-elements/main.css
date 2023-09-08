@@ -1,0 +1,30 @@
+.card{
+    border: 2px solid white;
+    width: 200px;
+    padding: 8px;
+    border-radius: 18px;
+}
+
+.card>header{
+    padding: 8px;
+    border: 1px solid white;
+}
+
+.card > .content{
+padding: 8px;
+    border: 1px solid white;
+}
+
+.card > footer{
+padding: 8px;
+    border: 1px solid white;
+}
+
+.card::before{
+    content: "Hello before";
+    color: red;
+}
+.card::after{
+    content: "Hello after";
+    color: blue;
+}
