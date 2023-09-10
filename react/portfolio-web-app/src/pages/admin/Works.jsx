@@ -33,13 +33,13 @@ export function Works() {
 
             {!works && <p>Yükleniyor !!</p>}
             {works && <ul className="workList">{
-                works.map((w) => <WorkItem key={w.id} {...w} onWorkDelete={handleWorkDelete} />)
+                works.map((w) => <WorkItem works={works} setWorks={setWorks} key={w.id} {...w} onWorkDelete={handleWorkDelete} />)
             }</ul>}
         </>
     );
 }
 
-function WorkItem({ id, title, description, isFeatured, excerpt, coverImage, tags, onWorkDelete }) {
+function WorkItem({ id, title, description, isFeatured, excerpt, coverImage, tags, onWorkDelete, works, setWorks }) {
     const [selectedWorkId, setSelectedWorkId] = useState();
     function handleWorkEdit() {
         // !selectedWorkId ? setSelectedWorkId(id) : setSelectedWorkId()
@@ -55,12 +55,12 @@ function WorkItem({ id, title, description, isFeatured, excerpt, coverImage, tag
                 <button type="button" className="btn btn-primary" onClick={handleWorkEdit} >{(selectedWorkId ? "Close" : "Update")}</button>
                 <button type="button" onClick={() => { onWorkDelete(id) }} className="btn btn-danger">Delete</button>
             </li>
-            {selectedWorkId === id && <FrmWorkItem work={{ id, title, isFeatured, description, excerpt, coverImage, tags }} />}
+            {selectedWorkId === id && <FrmWorkItem works={works} work={{ id, title, isFeatured, description, excerpt, coverImage, tags }} setWorks={setWorks} setSelectedWorkId={setSelectedWorkId} />}
         </>
     )
 }
 
-function FrmWorkItem({ works, setWorks, work }) {
+function FrmWorkItem({ works, setWorks, work, setSelectedWorkId }) {
     // const [newWork, setNewWork] = work ? useState({ title: work.title, excerpt: work.excerpt, description: work.description, coverImage: work.coverImage, tags: work.tags, isFeatured: work.isFeatured }) : useState({ title: "", excerpt: "", description: "", coverImage: "", tags: [], isFeatured: false })
     //["backend","java","python","perl"]
     const [newWork, setNewWork] = useState(work ? { ...work } : { title: "", excerpt: "", description: "", coverImage: "", tags: [], isFeatured: false })
@@ -83,8 +83,28 @@ function FrmWorkItem({ works, setWorks, work }) {
         e.preventDefault();
         //works [{title: "iş 1"},{title: "iş 2"}]
         //data {title: "iş 3"}
+
         if (work) {
-            updateWork(newWork)
+
+            updateWork(newWork).then((data) => {
+                //Data geldiyse güncelleme işlemine başlanabilir
+                //
+                /*const filteredWorks = works.filter((w) => {
+                    if (w.id !== newWork.id) {
+                        return w;
+                    }
+                })
+                filteredWorks.push(newWork)
+                setWorks(filteredWorks)*/
+                const updatedWorks = works.map((w) => {
+                    if (w.id === newWork.id) {
+                        return newWork
+                    }
+                    return w;
+                })
+                setWorks(updatedWorks)
+                setSelectedWorkId();
+            })
         }
         else {
             addWork(newWork).then((data) => {
@@ -104,5 +124,4 @@ function FrmWorkItem({ works, setWorks, work }) {
             IMPORTANT FEATURE</label>
         <button type="submit">{work ? "UPDATE" : "SEND"}</button>
     </form>
-
 }
